@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="task1@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.19">
+    <root id="1">
+      <ServerVersion>4.4.2</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="admin"/>
+    <schema id="3" parent="1" name="config"/>
+    <schema id="4" parent="1" name="local"/>
+    <schema id="5" parent="1" name="task1">
+      <Current>1</Current>
+    </schema>
+    <table id="6" parent="5" name="chat_rooms"/>
+    <table id="7" parent="5" name="mycollection"/>
+    <table id="8" parent="5" name="users"/>
+    <column id="9" parent="6" name="_id">
+      <DataType>ObjectId(0)|12s</DataType>
+    </column>
+    <column id="10" parent="6" name="name">
+      <DataType>String(0)|12s</DataType>
+    </column>
+    <column id="11" parent="6" name="users_count">
+      <DataType>Integer|4s</DataType>
+    </column>
+    <column id="12" parent="8" name="_id">
+      <DataType>ObjectId(0)|12s</DataType>
+    </column>
+    <column id="13" parent="8" name="role">
+      <DataType>String(0)|12s</DataType>
+    </column>
+    <column id="14" parent="8" name="date_of_birth">
+      <Position>1</Position>
+      <DataType>String(0)|12s</DataType>
+    </column>
+    <column id="15" parent="8" name="first_name">
+      <Position>2</Position>
+      <DataType>String(0)|12s</DataType>
+    </column>
+    <column id="16" parent="8" name="hobbies">
+      <Position>3</Position>
+      <DataType>array(0)|2003s</DataType>
+    </column>
+    <column id="17" parent="8" name="last_name">
+      <Position>4</Position>
+      <DataType>String(0)|12s</DataType>
+    </column>
+  </database-model>
+</dataSource>
