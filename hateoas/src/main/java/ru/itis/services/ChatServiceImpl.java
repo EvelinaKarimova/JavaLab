@@ -21,7 +21,7 @@ public class ChatServiceImpl implements ChatService {
         if (chatOptional.isPresent()){
             chat = chatOptional.get();
         } else throw new IllegalArgumentException("Chat not found");
-        chatRepository.delete(chat);
+        chat.delete();
         List<User> users = chat.getUsers();
         for (User user : users) {
             List<Chat> chats = user.getChats();

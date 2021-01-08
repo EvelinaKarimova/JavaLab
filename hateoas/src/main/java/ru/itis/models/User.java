@@ -23,6 +23,13 @@ public class User {
 
     private String firstName;
     private String lastName;
+    private UserRole role;
     @ManyToMany
     private List<Chat> chats;
+
+    public void becomeAdmin(){
+        if (this.role.equals(UserRole.USER)){
+            this.role = UserRole.ADMIN;
+        } else throw new IllegalArgumentException("This user already has admin role");
+    }
 }

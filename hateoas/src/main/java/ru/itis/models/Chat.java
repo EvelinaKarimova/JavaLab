@@ -20,8 +20,15 @@ public class Chat {
     @ManyToMany
     private List<User> users;
     private String name;
+    private ChatState state;
 
     @Id
     @GeneratedValue
     private Long id;
+
+    public void delete() {
+        if (this.state.equals(ChatState.ACTIVE)) {
+            this.state = ChatState.DELETED;
+        } else throw new IllegalArgumentException("This chat is already deleted");
+    }
 }
